@@ -22,7 +22,7 @@ class AboutArrays < Neo::Koan
   end
 
   def test_accessing_array_elements
-    array = [:peanut, :butter, :and, :jelly]
+    array = [:jelly, :butter, :and, :peanut]
 
     assert_equal __, array[0]
     assert_equal __, array.first
