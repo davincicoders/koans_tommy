@@ -139,13 +139,13 @@ EOS
 
   def test_you_can_get_a_substring_from_a_string
     string = "Bacon, lettuce and tomato"
-    assert_equal __, string[7,3]
-    assert_equal __, string[7..9]
+    assert_equal "let", string[7,3]
+    assert_equal "let", string[7..9]
   end
 
   def test_you_can_get_a_single_character_from_a_string
     string = "Bacon, lettuce and tomato"
-    assert_equal __, string[1]
+    assert_equal "a", string[1]
 
     # Surprised?
   end
@@ -161,15 +161,15 @@ EOS
 
   in_ruby_version("1.9", "2") do
     def test_in_modern_ruby_single_characters_are_represented_by_strings
-      assert_equal __, ?a
-      assert_equal __, ?a == 97
+      assert_equal "a", ?a
+      assert_equal false, ?a == 97
     end
   end
 
   def test_strings_can_be_split
     string = "Sausage Egg Cheese"
     words = string.split
-    assert_equal [__, __, __], words
+    assert_equal ["Sausage", "Egg", "Cheese"], words
   end
 
   def test_strings_can_be_split_with_different_patterns
