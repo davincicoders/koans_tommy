@@ -24,11 +24,11 @@ class AboutArrays < Neo::Koan
   def test_accessing_array_elements
     array = [:jelly, :butter, :and, :peanut]
 
-    assert_equal :peanut, array[0]
-    assert_equal :peanut, array.first
-    assert_equal :jelly, array[3]
-    assert_equal :jelly, array.last
-    assert_equal :jelly, array[-1]
+    assert_equal :jelly, array[0]
+    assert_equal :jelly, array.first
+    assert_equal :peanut, array[3]
+    assert_equal :peanut, array.last
+    assert_equal :peanut, array[-1]
     assert_equal :butter, array[-3]
   end
 
